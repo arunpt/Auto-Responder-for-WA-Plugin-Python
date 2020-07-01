@@ -1,0 +1,6 @@
+flask
+requests
+googletrans
+wikipedia
+urbandict
+beautifulsoup4
