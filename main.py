@@ -9,7 +9,7 @@ def command_handler():
     incoming = data['query']['message']
     cmd,msg = msghandler(incoming)
     if cmd == "/start":
-        return send_message(f"Im alive 😏\n_Powered by : auto responder plugin by W4RR10R_")
+        return send_message(f"Im alive 😏\n_Powered by : auto responder plugin by mr JUSTIN")
     if cmd == "/help":
         return send_message(plugin.help())
     elif cmd == "/tr":
