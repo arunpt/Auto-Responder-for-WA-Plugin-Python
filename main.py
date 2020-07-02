@@ -24,4 +24,4 @@ def command_handler():
         return send_message(" ") #to handle exception thrown by empty msg
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=8080) # set port to 5000 if you are using heroku
+    app.run(host='0.0.0.0', port=5000) # set port to 5000 if you are using heroku
