@@ -12,6 +12,7 @@ class Plugin:
                "/dict <word>\n" \
                "/maldict <word>\n" \
                "/wiki <search query>\n" \
+               
     def translate(self, message):
         try:
             lan_code,text = message.split("=")
