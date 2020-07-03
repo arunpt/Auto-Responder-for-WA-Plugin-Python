@@ -12,14 +12,14 @@ def command_handler():
         return send_message(f"Im alive 😏\n_Powered by : auto responder plugin by mr JUSTIN")
     if cmd == "/help":
         return send_message(plugin.help())
+     if cmd == "/covid":
+        return send_message(plugin.covid())
     elif cmd == "/tr":
         return send_message(plugin.translate(msg))
     elif cmd == "/wiki":
         return send_message(plugin.wiki(msg))
     elif cmd == "/dict":
         return send_message(plugin.udict(msg))
-     elif cmd == "/covid":
-        return send_message(plugin.covid(msg))
     elif cmd == "/maldict":
         return send_message(plugin.olam(msg))
     else:        
