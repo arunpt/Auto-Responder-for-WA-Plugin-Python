@@ -14,7 +14,6 @@ class Plugin:
                "/wiki <search query>\n" \
     def covid(self):
         return "/covid - feature coming soon!"
-               
     def translate(self, message):
         try:
             lan_code,text = message.split("=")
