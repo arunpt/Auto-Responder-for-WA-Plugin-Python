@@ -18,6 +18,8 @@ def command_handler():
         return send_message(plugin.wiki(msg))
     elif cmd == "/dict":
         return send_message(plugin.udict(msg))
+     elif cmd == "/covid":
+        return send_message(plugin.covid(msg))
     elif cmd == "/maldict":
         return send_message(plugin.olam(msg))
     else:        
