@@ -12,6 +12,8 @@ class Plugin:
                "/dict <word>\n" \
                "/maldict <word>\n" \
                "/wiki <search query>\n" \
+     def help(self):
+        return "/covid - feature coming soon!"
                
     def translate(self, message):
         try:
