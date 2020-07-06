@@ -4,3 +4,4 @@ googletrans
 wikipedia
 urbandict
 beautifulsoup4
+gunicorn
