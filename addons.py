@@ -3,11 +3,8 @@ import urbandict
 import requests
 from googletrans import Translator
 from bs4 import BeautifulSoup
-from urllib.request import urlopen as uReq
 
-
-            
-           
+class Plugin:   
     def help(self):
         return "/start - To check whether bot is online or not\n" \
                "/help - Help message\n" \
