@@ -6,8 +6,7 @@ from bs4 import BeautifulSoup
 from urllib.request import urlopen as uReq
 
 class Plugin:
-    def sam(self, message):
-        retun 
+    def sam(self, message): 
         my_url="https://www.flipkart.com/search?q=samsung+mobiles&sid=tyy%2C4io&as=on&as-show=on&otracker=AS_QueryStore_HistoryAutoSuggest_0_2&otracker1=AS_QueryStore_HistoryAutoSuggest_0_2&as-pos=0&as-type=HISTORY&as-searchtext=sa"
 
 uClient = uReq(my_url)
@@ -61,6 +60,7 @@ for container in containers:
     print(product_name.replace("," ,"|") +"," + final_price +"," + final_rating + "\n")
     f.write(product_name.replace("," ,"|") +"," + final_price +"," + final_rating + "\n")
 f.close()
+        return
     def help(self):
         return "/start - To check whether bot is online or not\n" \
                "/help - Help message\n" \
