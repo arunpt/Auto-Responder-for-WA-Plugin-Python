@@ -20,6 +20,8 @@ def command_handler():
         return send_message(plugin.udict(msg))
     elif cmd == "/maldict":
         return send_message(plugin.olam(msg))
+    elif cmd == "/mod":
+        return send_message(plugin.mod(msg))
     else:        
         return send_message(" ") #to handle exception thrown by empty msg
 
