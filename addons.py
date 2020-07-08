@@ -52,10 +52,7 @@ class Plugin:
       soup = BeautifulSoup(r.content.decode(encoding='UTF-8'), "lxml")
       reviews = soup.find_all('div', {"class": "_3ULzGw"})
         for item in reviews:
-        return item
-         else:
-            return "no results"
-        
+        return (item.text)
                 
     def olam(self, query):
         if not query:
