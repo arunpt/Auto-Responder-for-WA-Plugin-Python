@@ -18,8 +18,8 @@ def command_handler():
         return send_message(plugin.translate(msg))
     elif cmd == "/mod":
         return send_message(plugin.mod(msg))
-    elif cmd == "/flip":
-        return send_message(plugin.flip(msg))    
+   # elif cmd == "/flip":
+      #  return send_message(plugin.flip(msg))    
     elif cmd == "/wiki":
         return send_message(plugin.wiki(msg))
     elif cmd == "/dict":
