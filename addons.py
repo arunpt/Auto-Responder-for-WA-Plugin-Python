@@ -46,14 +46,14 @@ class Plugin:
         except Exception as err:
             return str(err) 
         
-   def mod(self, app_name):
-url = requests.get('https://www.flipkart.com/search?q={app_name.replace(' ','+')}')
-content = r.content.decode(encoding='UTF-8')
-soup = BeautifulSoup(r.content.decode(encoding='UTF-8'), "lxml")
-reviews = soup.find_all('div', {"class": "_3ULzGw"})
-for item in reviews:
-      return item
-        else:
+   def flip(self, app_name):
+      url = requests.get('https://www.flipkart.com/search?q={app_name.replace(' ','+')}')
+      content = r.content.decode(encoding='UTF-8')
+      soup = BeautifulSoup(r.content.decode(encoding='UTF-8'), "lxml")
+      reviews = soup.find_all('div', {"class": "_3ULzGw"})
+        for item in reviews:
+        return item
+         else:
             return "no results"
         
                 
