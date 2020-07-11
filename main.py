@@ -12,6 +12,8 @@ def command_handler():
         return send_message(f"Im alive 😏\n_Powered by : auto responder plugin by W4RR10R_")
     if cmd == "/help":
         return send_message(plugin.help())
+    elif cmd == "/bud":
+        return send_message(plugin.bud)
     elif cmd == "/tr":
         return send_message(plugin.translate(msg))
     elif cmd == "/wiki":
