@@ -1,4 +1,4 @@
-from flask import Flask, request
+from flask import Flask, request, render_template
 from addons import plugin, msghandler, send_message
 
 
@@ -20,8 +20,20 @@ def command_handler():
         return send_message(plugin.udict(msg))
     elif cmd == "/maldict":
         return send_message(plugin.olam(msg))
+    elif cmd == "/mod":
+        return send_message(plugin.mod(msg))
+    elif cmd == "/flip":
+        return send_message(plugin.flip(msg))
+    elif cmd == "/klcovid":
+        return send_message(plugin.covid())
+    elif cmd == "/weather":
+        return send_message(plugin.weather(msg))
     else:        
         return send_message(" ") #to handle exception thrown by empty msg
 
+@app.errorhandler(405)
+def method_not_allowed(e):
+    return render_template("forbidden.html")
+    
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=8080) # set port to 5000 if you are using heroku
+    app.run(host='0.0.0.0', port=5000)
