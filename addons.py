@@ -24,15 +24,18 @@ class Plugin:
     
     def weather(self, location):
         if not location:
-            return "format /weather kannur"            
-        api_url = f"https://api.openweathermap.org/data/2.5/weather?q={location.strip()}&units=metric&appid=APP_ID"
-        r = requests.get(api_url).json()
-        return f'*Location:* _{location.strip()}_\n' \
-               f'*Temperature:* _{r["main"]["temp"]}℃_\n' \
-               f'*Humidity:* _{r["main"]["humidity"]}_\n' \
-               f'*Wind Speed:* _{r["wind"]["speed"]}_\n' \
-               f'*Condition:* _{r["weather"][0]["description"]}_'
-                     
+            return "format /weather kannur"
+        try: 
+            api_url = f"https://api.openweathermap.org/data/2.5/weather?q={location.strip()}&units=metric&appid=1d74f5174b5bce8e43c9ac159905c7f6"
+            r = requests.get(api_url).json()
+            return f'*Location:* _{location.strip()}_\n' \
+                   f'*Temperature:* _{r["main"]["temp"]}℃_\n' \
+                   f'*Humidity:* _{r["main"]["humidity"]}_\n' \
+                   f'*Wind Speed:* _{r["wind"]["speed"]}_\n' \
+                   f'*Condition:* _{r["weather"][0]["description"]}_'
+        except:
+            return f"No results found for {location}"
+            
     def covid(self):
         soup = self.parse_html("https://dashboard.kerala.gov.in/")
         confirmed = soup.find("div",{"class":"small-box bg-info"}).h3.text
